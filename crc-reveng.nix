@@ -13,8 +13,6 @@ stdenv.mkDerivation rec {
     substituteInPlace config.h --replace "BMP_SUB   16" "BMP_SUB 32"
   '';
   
-#  buildPhase = "make";
-
   installPhase = ''
     mkdir -p $out/bin
     cp ./reveng $out/bin
